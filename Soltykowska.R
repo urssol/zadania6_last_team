@@ -18,3 +18,17 @@ horoskop = function (imie, miesiac){
   }
 }
 horoskop("Ula", 9)
+
+
+#zad3
+
+horoskop = function (imie, miesiac){
+   if ((miesiac %% 2) || (str_detect(imie, pattern = "^K", "^M", "^Z"))){
+    cat(paste("Osoba o imieniu",imie, "będzie miała jutro szczęście."))
+  } else cat(paste("Osoba o imieniu", imie, "będzie miała jutro nieszczęście."))
+}
+
+
+#zad4
+
+pomiary = "2019-03-11: 23.5, 19/03/12: 12.7, 2019.03.13: 11.1, 2019-marzec-14: 14
