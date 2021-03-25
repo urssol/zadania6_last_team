@@ -11,9 +11,9 @@ str_sub(tekst1[2], start = -5, end = -4)
 #zad2
 
 horoskop = function (imie, miesiac){
-  if (miesiac %in% c(2,4,6,8,10,12)) {
+  if (miesiac %% 2 == 0) {
     cat(paste("Osoba o imieniu", imie, "będzie miała jutro szczęście."))
-  } else if (miesiac %in% c(1,3,5,7,9,11)) {
+  } else {
     cat(paste("Osoba o imieniu", imie, "będzie miała jutro nieszczęście."))
   }
 }
@@ -22,12 +22,17 @@ horoskop("Ula", 9)
 
 #zad3
 
-horoskop = function (imie, miesiac){
-   if ((miesiac %% 2) || (str_detect(imie, pattern = "^K", "^M", "^Z"))){
-    cat(paste("Osoba o imieniu",imie, "będzie miała jutro szczęście."))
-  } else cat(paste("Osoba o imieniu", imie, "będzie miała jutro nieszczęście."))
+horoskop = function(imie, miesiac){
+  if (str_detect(imie, pattern = "^K|M|Z")){
+    cat(paste("Osoba o imieniu", imie, "będzie miała jutro szczęście."))
+  } else if (miesiac %% 2 == 0){
+    cat(paste("Osoba o imieniu", imie, "będzie miała jutro szczęście."))
+  } else {
+    cat(paste("Osoba o imieniu", imie, "będzie miała jutro nieszczęście."))
+  }
 }
 
+horoskop("Ula", 1)
 
 #zad4
 
