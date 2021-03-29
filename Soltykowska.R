@@ -47,4 +47,9 @@ daty
 
 #zad5
 
+pomiary = str_replace(pomiary, pattern = "2019.03.13", replacement = "2019/03/13")
+wartosci = str_extract_all(pomiary, pattern = "[0-3]+[\\.][0-3]")
+
+wartosci
+
 
